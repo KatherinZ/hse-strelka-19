@@ -1,0 +1,140 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro|Nanum+Gothic|PT+Mono&display=swap');
+:root{
+  --main-color: #006Aff;
+}
+
+body{
+    font-family: "Anonymous Pro";
+}
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a{
+  text-decoration: none;
+}
+/* Секция Hero */
+.hero {
+  background-image: url(../img/bg.png);
+  background-size: cover;
+  /* картинка заполняет ровно столько, сколько видно в браузерном окне */
+  background-position: center;
+  height: 85vh;
+  /* при сжатии окна картинка пропорционально уменьшится (в этом случае займеь 85% видимой части) */
+  text-align: center;
+  position: relative;
+}
+.hero nav{
+  background: var(--main-color);
+  display: inline-block;
+  padding: 10px;
+  margin-top: 20px;
+
+}
+.hero a{
+  color: #fff;
+}
+
+.hero nav ul li{
+  display: inline-block;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  /* делает все слова олл-капсом */
+  letter-spacing: 1px;
+  font-size: 14px;
+
+}
+.hero nav ul li:last-child{
+  padding-left: 40px;
+}
+.hero h1{
+  color: #fff;
+  font-size: 110px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  letter-spacing: 1,5px;
+}
+.hero .btn{
+  background: var(--main-color);
+  position: absolute;
+  color: #fff;
+  padding: 5px 10px;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+/* все это позволяет выровнять элемент по центру, % означаюь в первом случае сдвиг на полэкрана, во втором - влево на половину своей длины */
+}
+.edu {
+  height: 85vh;
+  display: flex;
+  /* flex располагает элементы впритирку друг к другу, ему можно задать вид: flex: colum или row-reverse; */
+}
+.post, .research{
+  background-position: center;
+  height: 100%;
+  background-size: cover;
+  Width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.post{
+  background-image: url(../img/post.jpg);
+}
+.research{
+  background-image: url(../img/post.jpg);
+}
+.post a {
+  background-color: #fff;
+  color: red;
+  padding: 50px 25px;
+  font-size: 28px;
+  white-space: pre-line;
+  /* расположение каждого слова на новой отдельной строке, то же самое дает оборачивание каждого нового слова в тег <span>слово</span>*/
+}
+.research a {
+  background-color: red;
+  color: #fff;
+  padding: 25px;
+  font-size: 28px;
+}
+.post span{
+  display: inline-block;
+
+}
+/* Секция с книгами */
+
+.books{
+  height: 85vh;
+  background-color: var(--main-color);
+}
+.books ul{
+  display: flex;
+  overflow-x: scroll;
+  /* объекты внутри элемента смогут прокручиваться по оси х или у в зависимости от качества jverflow */
+}
+.books ul li img{
+  width: 220px;
+ margin: 0 10px;
+ transition: transform 300ms ease;
+}
+.books ul li img:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  /* тк 1=100 */
+}
+.books .strelka-logo{
+   margin-top: 36px;
+    display: inline-block;
+    width: 384px;
+    height: 136px;
+    text-indent: -9999px;
+    background-image: url(/css/img/strelka-sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0 -251px;
+}
